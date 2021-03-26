@@ -5,19 +5,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>pj1987111</groupId>
-    <artifactId>yisql-common_2.11</artifactId>
+    <artifactId>yisql-common_2.12</artifactId>
     <version>0.2.0</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- spark 2.4 -->
-        <scala.version>2.11.8</scala.version>
-        <scala.binary.version>2.11</scala.binary.version>
+<!--        <scala.version>2.11.8</scala.version>-->
+<!--        <scala.binary.version>2.11</scala.binary.version>-->
 
         <!-- spark 3.0 -->
-<!--        <scala.version>2.12.10</scala.version>-->
-<!--        <scala.binary.version>2.12</scala.binary.version>-->
+        <scala.version>2.12.10</scala.version>
+        <scala.binary.version>2.12</scala.binary.version>
 
         <guava.version>16.0</guava.version>
         <httpclient.version>4.5.3</httpclient.version>
