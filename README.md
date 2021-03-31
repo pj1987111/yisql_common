@@ -1,1 +1,1 @@
-yisql common lib for [yisql](https://github.com/pj1987111/yisql)
+yisql common lib scala-1.2 for [yisql](https://github.com/pj1987111/yisql)
