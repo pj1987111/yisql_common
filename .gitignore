@@ -21,6 +21,7 @@
 *.tar.gz
 *.rar
 
+target
 target/
 .idea/
 logs/
