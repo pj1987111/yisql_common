@@ -1,7 +1,8 @@
 package com.zhy.yisql.common.utils.log
 
-import org.apache.log4j.LogManager
+//import org.apache.log4j.LogManager
 
+import org.slf4j.LoggerFactory;
 /**
   * Utility trait for classes that want to log data. Creates a SLF4J logger for the class and allows
   * logging messages at different levels using methods that only evaluate parameters lazily if the
@@ -9,7 +10,7 @@ import org.apache.log4j.LogManager
   */
 trait Logging {
 
-    @transient private lazy val log = LogManager.getLogger(this.getClass.getName.stripSuffix("$"))
+    @transient private lazy val log = LoggerFactory.getLogger(this.getClass.getName.stripSuffix("$"))
 
     // Log methods that take only a String
     protected def logInfo(msg: => String) {
