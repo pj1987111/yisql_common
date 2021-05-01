@@ -110,7 +110,7 @@ public class WowLs extends WowFsCommand {
                 itemName
         );
         if (format) {
-            Map lineMap = new HashMap<String, Object>();
+            Map<String, Object> lineMap = new HashMap<>();
             String[] ss = line.split("\\s+");
             lineMap.put("permission", ss[0]);
             lineMap.put("replication", ss[1]);
