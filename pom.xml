@@ -16,13 +16,13 @@
         <scala.binary.version>2.11</scala.binary.version>
 
         <!-- spark 3.0 -->
-<!--        <scala.version>2.12.10</scala.version>-->
-<!--        <scala.binary.version>2.12</scala.binary.version>-->
+        <!--        <scala.version>2.12.10</scala.version>-->
+        <!--        <scala.binary.version>2.12</scala.binary.version>-->
 
         <guava.version>16.0</guava.version>
         <httpclient.version>4.5.3</httpclient.version>
 
-<!--        <scope>compile</scope>-->
+        <!--        <scope>compile</scope>-->
         <scope>provided</scope>
 
         <jackson.version>2.6.7.1</jackson.version>
@@ -137,42 +137,46 @@
         </dependency>
     </dependencies>
     <build>
-        <sourceDirectory>src/main/scala</sourceDirectory>
-        <testSourceDirectory>src/test/scala</testSourceDirectory>
+        <!--        <sourceDirectory>src/main/scala</sourceDirectory>-->
+        <!--        <testSourceDirectory>src/test/scala</testSourceDirectory>-->
         <plugins>
+            <!--            <plugin>-->
+            <!--                <groupId>net.alchim31.maven</groupId>-->
+            <!--                <artifactId>scala-maven-plugin</artifactId>-->
+            <!--                <version>3.2.2</version>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>scala-compile-first</id>-->
+            <!--                        <phase>process-resources</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>add-source</goal>-->
+            <!--                            <goal>compile</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--                <configuration>-->
+            <!--                    <scalaVersion>${scala.version}</scalaVersion>-->
+            <!--                    <recompileMode>incremental</recompileMode>-->
+            <!--                    <useZincServer>true</useZincServer>-->
+            <!--                    <args>-->
+            <!--                        <arg>-unchecked</arg>-->
+            <!--                        <arg>-deprecation</arg>-->
+            <!--                        <arg>-feature</arg>-->
+            <!--                    </args>-->
+            <!--                    <javacArgs>-->
+            <!--                        <javacArg>-source</javacArg>-->
+            <!--                        <javacArg>1.8</javacArg>-->
+            <!--                        <javacArg>-target</javacArg>-->
+            <!--                        <javacArg>1.8</javacArg>-->
+            <!--                        <javacArg>-Xlint:all,-serial,-path</javacArg>-->
+            <!--                    </javacArgs>-->
+            <!--                </configuration>-->
+            <!--            </plugin>-->
             <plugin>
-                <groupId>net.alchim31.maven</groupId>
-                <artifactId>scala-maven-plugin</artifactId>
-                <version>3.2.2</version>
-                <executions>
-                    <execution>
-                        <id>scala-compile-first</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>add-source</goal>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <scalaVersion>${scala.version}</scalaVersion>
-                    <recompileMode>incremental</recompileMode>
-                    <useZincServer>true</useZincServer>
-                    <args>
-                        <arg>-unchecked</arg>
-                        <arg>-deprecation</arg>
-                        <arg>-feature</arg>
-                    </args>
-                    <javacArgs>
-                        <javacArg>-source</javacArg>
-                        <javacArg>1.8</javacArg>
-                        <javacArg>-target</javacArg>
-                        <javacArg>1.8</javacArg>
-                        <javacArg>-Xlint:all,-serial,-path</javacArg>
-                    </javacArgs>
-                </configuration>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.9.1</version>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
